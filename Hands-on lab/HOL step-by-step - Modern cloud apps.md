@@ -38,7 +38,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
             - [Subtask 1: Create the Web App and SQL database instance](#subtask-1-create-the-web-app-and-sql-database-instance)
             - [Subtask 2: Provision the storage account](#subtask-2-provision-the-storage-account)
             - [Subtask 3: Update the configuration in the starter project](#subtask-3-update-the-configuration-in-the-starter-project)
-            - [Subtask 4: Deploy the e-commerce Web App from Visual Studio](#subtask-4-deploy-the-e-commerce-web-app-from-visual-studio)
+            - [Subtask 4: Deploy the e-commerce Web App from Github](#subtask-4-deploy-the-e-commerce-web-app-from-github)
         - [Task 2: Setup SQL Database Geo-Replication](#task-2-setup-sql-database-geo-replication)
             - [Subtask 1: Add secondary database](#subtask-1-add-secondary-database)
             - [Subtask 2: Failover secondary SQL database -- OPTIONAL](#subtask-2-failover-secondary-sql-database----optional)
@@ -332,37 +332,36 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![On the App Service blade, the Save button selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image44.png "App Service blade")
 
-#### Subtask 4: Deploy the e-commerce Web App from Visual Studio
+#### Subtask 4: Deploy the e-commerce Web App from Github
 
-1.  Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** of Visual Studio.
+1.  Navigate to the web app you have previously deployed and click on Deployment Centre.
 
-    ![In Solution Explorer, under Solution \'Contoso.Apps.SportsLeague\' (7 projects), Web is expanded, and under Web, Contoso.Apps.SportsLeague.Web is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image45.png "Solution Explorer")
+    ![In Azure Portal the Web App deployment centre is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/deploymentcentre.png "Deployment Centre")
 
-2.  Right-click the **Contoso.Apps.SportsLeague.Web** project, and click **Publish**.
+2.  Select **External**.
 
-    ![In Solution Explorer, Contoso.Apps.SportsLeague.Web is selected, and from its right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image46.png "Solution Explorer")
+    ![In the Azure Portal select external repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/externalrepo.png "External Repo")
 
-3.  Choose **Microsoft Azure App Service** as the publish target, and choose **Select Existing**.
+3.  Choose **App Service Kudu Build Server**.
 
-![On the Publish tab, the Microsoft Azure App Service tile is selected, as is the radio button for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image47.png "Publish tab")
+![App Service Kudu build server is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/kudu.png "Kudu")
 
-4.  If prompted, log on with your credentials, and ensure the subscription you published earlier are selected.
+4.  Input the following:
+    Repo: https://github.com/Jath1024/MCW-Modern-cloud-apps
+    Branch: master
+    Repo Type: Git
 
-    ![Screenshot of the Microsoft account subscriptions tile.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image48.png "Microsoft account tile")
+    ![Choose repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/repo.png "Repository")
 
-5.  Select the **Contoso Sports Web App**.
+5.  Click continue and finish.
 
-    ![Under Subscriptions, under contososports, contososportsweb0 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image49.png "Subscriptions")
+6.  Wait for the deployment to complete.
 
-6.  Click **OK**, and click **Publish** to publish the Web Application.
+    ![Screenshot of the web app deployment progress.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/webappdeploy.png "Web App deploy status")
 
-7.  In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully.
+7.  Validate the website by browsing to the url of your web app.
 
-    ![Screenshot of the Visual Studio Output view, with the Publish Succeeded message circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image50.png "Visual Studio Output view")
-
-8.  Validate the website by clicking the **Store** link on the menu. As long as products return, the connection to the database is successful.
-
-    ![Screenshot of the Store link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image51.png "Store link")
+    ![Web App overview for url.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/webappurl.png "Store link")
 
 ### Task 2: Setup SQL Database Geo-Replication
 
