@@ -347,11 +347,11 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 ![App Service Kudu build server is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/kudu.png "Kudu")
 
 4.  Input the following:
-    Repo: https://github.com/Jath1024/MCW-Modern-cloud-apps
+    Repo: https://github.com/Jath1024/contososportsleagueweb
     Branch: master
     Repo Type: Git
 
-    ![Choose repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/repo.png "Repository")
+    ![Choose repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/repoweb.png "Repository")
 
 5.  Click continue and finish.
 
@@ -645,25 +645,32 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![the Save button is circled on the App Service blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image44.png "App Service blade")
 
-#### Subtask 3: Deploy the call center admin Web App from Visual Studio
+#### Subtask 3: Deploy the call center admin Web App from Github
 
-1.  Navigate to the **Contoso.Apps.SportsLeague.Admin** project located in the **Web** folder using the **Solution Explorer** in Visual Studio.
+1.  Navigate to the web app you have previously deployed and click on Deployment Centre.
 
-    ![In Solution Explorer, under Solution Contoso.Apps.SportsLeague, The Web folder is expanded, and Contoso.Apps.SportsLeague.Admin is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image85.png "Solution Explorer")
+    ![In Azure Portal the Web App deployment centre is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/deploymentcentre.png "Deployment Centre")
 
-2.  Right-click the **Contoso.Apps.SportsLeague.Admin** project, and click **Publish**.
+2.  Select **External**.
 
-    ![In Solution Explorer, the right-click menu for Contoso.Apps.SportsLeague.Admin displays, and Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image86.png "Right-Click menu")
+    ![In the Azure Portal select external repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/externalrepo.png "External Repo")
 
-3.  Choose **Microsoft Azure App Service** as the publish target, and choose **Select Existing**.
+3.  Choose **App Service Kudu Build Server**.
 
-    ![On the Publish tab, Microsoft Azure App Service is selected. Below that, the radio button is selected for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image87.png "Publish tab")
+![App Service Kudu build server is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/kudu.png "Kudu")
 
-4.  Select the **Web App** for the Call Center Admin App.
+4.  Input the following:
+    Repo: https://github.com/Jath1024/contososportsleagueadmin
+    Branch: master
+    Repo Type: Git
 
-    ![In the App Service section, in the tree view at the bottom, the contososports folder is expanded, and contososportsadmin4 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image88.png "App Service section")
+    ![Choose repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/repoadmin.png "Repository")
 
-5.  Click **OK**, and click **Publish** to deploy the site.
+5.  Click continue and finish.
+
+6.  Wait for the deployment to complete.
+
+    ![Screenshot of the web app deployment progress.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/webappdeploy.png "Web App deploy status")
 
 6.  The website should load / display the following:
 
@@ -689,27 +696,32 @@ In this exercise, the attendee will provision an Azure API app template using th
 
     ![Screenshot of the Create button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image32.png "Create button")
 
-#### Subtask 2: Deploy the Contoso.Apps.PaymentGateway project in Visual Studio
+#### Subtask 2: Deploy the Contoso.Apps.PaymentGateway solution from Github
 
-1.  Navigate to the **Contoso.Apps.PaymentGateway** project located in the **APIs** folder using the **Solution Explorer** in Visual Studio.
+1.  Navigate to the web app you have previously deployed and click on Deployment Centre.
 
-    ![In Solution Explorer, under Solution Contoso.Apps.SportsLeague, the API folder is expanded, and Contoso.Apps.PaymentGateway is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image95.png "Solution Explorer")
+    ![In Azure Portal the Web App deployment centre is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/deploymentcentre.png "Deployment Centre")
 
-2.  Right-click the **Contoso.Apps.PaymentGateway** project, and click **Publish**.
+2.  Select **External**.
 
-    ![In Solution Explorer, Contoso.Apps.PaymentGateway is selected, and in its right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image96.png "Solution Explorer")
+    ![In the Azure Portal select external repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/externalrepo.png "External Repo")
 
-3.  On the **Publish Web** dialog box, click **Microsoft Azure App Service**, and choose **Select Existing**.
+3.  Choose **App Service Kudu Build Server**.
 
-    ![In the Publish web dialog box, Microsoft Azure App Service is selected, as is the radio button for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image97.png "Publish web dialog box")
+![App Service Kudu build server is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/kudu.png "Kudu")
 
-4.  Select the Payment Gateway API app created earlier, click **OK** **\>** **Publish**.
+4.  Input the following:
+    Repo: https://github.com/Jath1024/contososportsleaguepaymentgateway
+    Branch: master
+    Repo Type: Git
 
-    ![In the App Service section, the contososports folder is expanded, and PaymentsAPIO is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image98.png "App Service section")
+    ![Choose repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/repopayment.png "Repository")
 
-5.  In the Visual Studio **Output** view, you will see a status indicating the Web App was published successfully.
+5.  Click continue and finish.
 
-    ![The Visual Studio output shows that the web app was published successfully. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image99.png "Visual Studio output")
+6.  Wait for the deployment to complete.
+
+    ![Screenshot of the web app deployment progress.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/webappdeploy.png "Web App deploy status")
 
 6. Copy and paste the **URL** of the deployed **API App** for later use.
 
@@ -742,7 +754,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In the App Service blade, under API, CORS is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image102.png "App Service blade")
 
-2.  In the **ALLOWED ORIGINS** text box, specify the URL of the **Offers Web API App** (can be found in the **Overview** link), and click **Save**.
+2.  In the **ALLOWED ORIGINS** text box, specify the URL of the very first **Web App** that you deployed (can be found in the **Overview** link), and click **Save**.
 
 #### Subtask 3: Update the configuration in the starter project
 
@@ -768,26 +780,32 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![The Save button is selected in the App Service blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image106.png "Save button")
 
-#### Subtask 4: Deploy the Contoso.Apps.SportsLeague.Offers project in Visual Studio
+#### Subtask 4: Deploy the Contoso.Apps.SportsLeague.Offers solution from Github
 
-1.  Navigate to the **Contoso.Apps.SportsLeague.Offers** project located in the **APIs** folder using the **Solution Explorer** in Visual Studio.
+1.  Navigate to the web app you have previously deployed and click on Deployment Centre.
 
-    ![In Solution Explorer, under Solution Contoso.Apps.SportsLeague, the API folder is expanded, and Contoso.Apps.SportsLeague.Offer is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image107.png "Solution Explorer")
+    ![In Azure Portal the Web App deployment centre is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/deploymentcentre.png "Deployment Centre")
 
-2.  Right-click the **Contoso.Apps.SportsLeague.Offers** project, and select **Publish**.
+2.  Select **External**.
 
-    ![In Solution Explorer, from the Contoso.Apps.SportsLeague.Admin right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image108.png "Solution Explorer")
+    ![In the Azure Portal select external repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/externalrepo.png "External Repo")
 
-3.  On the **Publish Web** dialog box, click **Microsoft Azure App Service**, and choose **Select Existing**.
+3.  Choose **App Service Kudu Build Server**.
 
-    ![On the Publish tab, the Microsoft Azure App Service tile is selected, and under it, the radio button for Select Existing is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image109.png "Publish tab")
+![App Service Kudu build server is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/kudu.png "Kudu")
 
-4.  Select the Offers API app created earlier, and click **OK** **\>** **Publish**.
+4.  Input the following:
+    Repo: https://github.com/Jath1024/contososportsleagueoffersapi
+    Branch: master
+    Repo Type: Git
 
-    ![In the App Service section, the contososports folder is expanded, and OffersAPI4 is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image110.png "App Service section")
+    ![Choose repo.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/repooffers.png "Repository")
 
-5.  In the Visual Studio **Output** view, you will see a status the API app was published successfully.
+5.  Click continue and finish.
 
+6.  Wait for the deployment to complete.
+
+    ![Screenshot of the web app deployment progress.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/webappdeploy.png "Web App deploy status")
 6.  Record the value of the deployed API app URL for later use.
 
 ### Task 6: Update and deploy the e-commerce website
